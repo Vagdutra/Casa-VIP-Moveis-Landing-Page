@@ -118,6 +118,66 @@
             </div>
         </section>
 
+        <section id="portfolio" class="py-28 px-6 bg-[#0a0a0a] border-b border-gray-900">
+            <div class="max-w-7xl mx-auto">
+                <header class="text-center mb-20">
+                    <p class="text-gold text-[10px] uppercase tracking-[0.5em] mb-4 font-bold">Portfólio Casa VIP</p>
+                    <h2 class="premium-title text-4xl md:text-6xl mb-6">Projetos <span class="text-gold italic">Entregues</span></h2>
+                    <div class="w-20 h-0.5 bg-gold mx-auto"></div>
+                </header>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="cv-card rounded-2xl overflow-hidden group flex flex-col h-full">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="../Projetos/Saint_Emilion/imagens/CasaVip - Projeto 1 (1).jpg" alt="Saint Emilion" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="premium-title text-2xl mb-4 text-white">Saint Emilion</h3>
+                            <p class="text-gray-400 text-sm font-light mb-8 leading-relaxed flex-grow">
+                                Equilíbrio entre sofisticação e conforto rústico no coração de Canela.
+                            </p>
+                            <a href="../Projetos/Saint_Emilion/saint-emilion.html" class="text-gold font-bold uppercase text-[10px] tracking-widest flex items-center gap-2 hover:gap-4 transition-all mt-auto">
+                                Ver Detalhes <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cv-card rounded-2xl overflow-hidden group flex flex-col h-full border-gold/20">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="../Projetos/Veneto_1/imagens/CasaVip - Projeto 2 (1).jpg" alt="Vêneto 1" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="premium-title text-2xl mb-4 text-white">Vêneto 1</h3>
+                            <p class="text-gray-400 text-sm font-light mb-8 leading-relaxed flex-grow">
+                                Integração total e marcenaria de alto padrão em Gramado.
+                            </p>
+                            <a href="../Projetos/Veneto_1/veneto-1.html" class="text-gold font-bold uppercase text-[10px] tracking-widest flex items-center gap-2 hover:gap-4 transition-all mt-auto">
+                                Ver Detalhes <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cv-card rounded-2xl overflow-hidden group flex flex-col h-full">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="../Projetos/Veneto_2/imagens/CasaVip - Projeto 3 (1).jpg" alt="Vêneto 2" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="premium-title text-2xl mb-4 text-white">Vêneto 2</h3>
+                            <p class="text-gray-400 text-sm font-light mb-8 leading-relaxed flex-grow">
+                                Minimalismo e elegância com foco na funcionalidade do dia-a-dia.
+                            </p>
+                            <a href="../Projetos/Veneto_2/veneto-2.html" class="text-gold font-bold uppercase text-[10px] tracking-widest flex items-center gap-2 hover:gap-4 transition-all mt-auto">
+                                Ver Detalhes <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="py-16 bg-[#0a0a0a] border-b border-[#C9A14A]/5">
             <div class="max-w-7xl mx-auto px-6">
                 <p class="text-gray-500 text-[10px] uppercase tracking-[0.5em] mb-12 text-center font-bold">Marcas de Prestígio</p>
@@ -254,8 +314,8 @@
 
     <script>
         /**
-         * Lead Capture Management
-         * Handles lead redirection to WhatsApp with pre-filled messaging
+         * Gestão do Formulário de Contato
+         * Encaminha o lead para o WhatsApp com mensagem pré-preenchida
          */
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -268,8 +328,8 @@
 
             const mensagem = `Olá, equipe Casa VIP! Meu nome é ${formData.nome}. Tenho interesse em conversar sobre: ${formData.ambiente}. Como podemos iniciar meu projeto?`;
 
-            // Log de telemetria local (Opcional: Enviar para API de Dashboard aqui)
-            console.log("Lead gerado para:", formData.nome);
+            // Telemetria local para debug (Integrável com dashboards como Streamlit futuramente)
+            console.log("Novo lead gerado via site Casa VIP:", formData.nome);
 
             window.open(`https://wa.me/${formData.numero}?text=${encodeURIComponent(mensagem)}`, '_blank');
         });
