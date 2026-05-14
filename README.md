@@ -10,3 +10,4 @@ Projeto de landing page desenvolvido para a **Casa VIP Móveis**, com foco em so
 
 ## 📁 Estrutura do Projeto
 O projeto utiliza caminhos relativos para navegação entre as linhas de produtos (Estar, Jantar e Descanso), garantindo que a estrutura seja independente de servidor.
+echo "" >> README.md
